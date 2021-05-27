@@ -24,16 +24,12 @@ function sendText(text) {
 
 // LINEトーク画面上でメッセージ送信
 function sendMessages(text) {
-    liff.sendMessages([{
+    liff.sendMessages(replyToken[{
         'type': 'text',
         'text': "以下の内容で出勤状況修正依頼を受付けました。"
     },{
         'type': 'text',
         'text': text
-    },{
-       "type": "sticker",
-       "packageId": "11537",
-       "stickerId": "52002739"
    }]).then(function () {
         liff.closeWindow();
     }).catch(function (error) {

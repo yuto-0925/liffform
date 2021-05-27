@@ -24,7 +24,7 @@ function sendText(text) {
 
 // LINEトーク画面上でメッセージ送信
 function sendMessages(text) {
-    liff.sendMessages(replyToken[{
+    liff.sendMessages([{
         'type': 'text',
         'text': "以下の内容で申し込みを受付けました。"
     },{
